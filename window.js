@@ -14,6 +14,7 @@ class OldWin extends HTMLElement {
         super();
         this.classList.add("window", "draggable");
         this.style.margin = "32px";
+        this.style.overflow = "auto";
 
         const body = document.createElement("div");
         body.classList.add("window-body");

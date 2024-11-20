@@ -31,29 +31,33 @@
         user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
     }
 
-
+    #pic { top: 90px; left: 45px; }
+    #about { top: 630px; left: 131px; }
+    #github { top: 680px; left: 650px; }
+    #projects { top: 42px; left: 1247px; }
+    #time { top: 20px; left: 200px; }
 </style>
 
 <body>
 
-<old-win title="ethan-stevenson.jpg" style="width: 315px;">
+<old-win id="pic" title="ethan-stevenson.jpg">
     <img src="ethan_old_quality.jpg" alt="?" style="width: 300px">
 </old-win>
 
-<old-win title="time.ntp" style="width: 220px;">
+<old-win id="time" title="time.ntp" style="width: 200px">
     <div class="status-bar">
         <p class="status-bar-field">My Current Time</p>
         <p id="clock" class="status-bar-field">00:00:00</p>
     </div>
 </old-win>
 
-<old-win title="github.md">
+<old-win id="github" title="github.md">
     <fieldset>
         <img src="https://ghchart.rshah.org/008689/mrnavastar.svg" alt="mrnavastar's Github chart" />
     </fieldset>
 </old-win>
 
-<old-win title="projects.conf" style="width: 300px;">
+<old-win id="projects"  title="projects.conf">
     <ul class="tree-view">
         <li>Notable Projects & Contributions</li>
         <li>------------------------</li>
@@ -103,6 +107,19 @@
                 </ul>
             </details>
         </li>
+    </ul>
+</old-win>
+
+<old-win id="about" title="about-me.txt">
+    <ul class="tree-view">
+        <li>Hello! My name is Ethan.</li>
+        <li> - </li>
+        <li>I am a backend developer from 🇨🇦 Canada with a passion for programming</li>
+        <li>and greatly enjoy solving unique problems. I love working in Java & Golang,</li>
+        <li>though I am still in search of the perfect language.</li>
+        <li> - </li>
+        <li>I have lots of experience working with databases, web/microservice technologies,</li>
+        <li>low level systems, and game dev as well.</li>
     </ul>
 </old-win>
 </body>
