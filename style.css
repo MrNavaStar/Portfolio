@@ -1,0 +1,27 @@
+body {
+    /*background-image: url("https://www.hdwallpapers.in/download/technology_windows_98_hd_windows_98-2560x1440.jpg");*/
+    background-image: url("assets/EthanStevenson98.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+old-win {
+    position: absolute;
+    touch-action: none;
+    /* No Select */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/*#pic { top: 90px; left: 45px; }
+#about { top: 630px; left: 131px; }
+#github { top: 680px; left: 650px; }
+#projects { top: 42px; left: 1247px; }
+#time { top: 20px; left: 200px; }*/

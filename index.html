@@ -4,123 +4,89 @@
     <title>Ethan Stevenson</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
-<script type="module" src="./window.js"></script>
-<script type="module" src="./clock.js"></script>
-
-<style>
-    body {
-        /*background-image: url("https://www.hdwallpapers.in/download/technology_windows_98_hd_windows_98-2560x1440.jpg");*/
-        background-image: url("EthanStevenson98.png");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        overflow: hidden;
-        height: 100vh;
-    }
-
-    old-win {
-        position: absolute;
-        touch-action: none;
-        /* No Select */
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    }
-
-    #pic { top: 90px; left: 45px; }
-    #about { top: 630px; left: 131px; }
-    #github { top: 680px; left: 650px; }
-    #projects { top: 42px; left: 1247px; }
-    #time { top: 20px; left: 200px; }
-</style>
-
+<script type="module" src="js/window.js"></script>
+<script type="module" src="js/random.js"></script>
+<script type="module" src="js/clock.js"></script>
 <body>
-
-<old-win id="pic" title="ethan-stevenson.jpg">
-    <img src="ethan_old_quality.jpg" alt="?" style="width: 300px">
-</old-win>
-
-<old-win id="time" title="time.ntp" style="width: 200px">
-    <div class="status-bar">
-        <p class="status-bar-field">My Current Time</p>
-        <p id="clock" class="status-bar-field">00:00:00</p>
-    </div>
-</old-win>
-
-<old-win id="github" title="github.md">
-    <fieldset>
-        <img src="https://ghchart.rshah.org/008689/mrnavastar.svg" alt="mrnavastar's Github chart" />
-    </fieldset>
-</old-win>
-
-<old-win id="projects"  title="projects.conf">
-    <ul class="tree-view">
-        <li>Notable Projects & Contributions</li>
-        <li>------------------------</li>
-        <li>
-            <details open>
-                <summary>Java</summary>
-                <ul>
-                    <li><a href="https://github.com/MrNavaStar/SQLib" target="_blank" style="color: #008689">SQLib</a> : A custom SQL orm with a focus on game dev</li>
-                    <li><a href="https://github.com/MrNavaStar/R" target="_blank" style="color: #008689">R</a> : The Jolliest Java Reflection Library on the 7 Seas </li>
-                    <li><a href="https://github.com/MrNavaStar/ProtoWeaver" target="_blank" style="color: #008689">ProtoWeaver</a> : A networking library for integrating custom protocols with minecraft</li>
-                </ul>
-            </details>
-        </li>
-        <li>
-            <details open>
-                <summary>Python</summary>
-                <ul>
-                    <li><a href="https://github.com/MrNavaStar/WorldArchiver" target="_blank" style="color: #008689">WorldArchiver</a> : A simple web repository to archive your favourite minecraft worlds!</li>
-                </ul>
-            </details>
-        </li>
-        <li>
-            <details open>
-                <summary>Go</summary>
-                <ul>
-                    <li><a href="https://github.com/MrNavaStar/Lyra" target="_blank" style="color: #008689">Lyra</a> : A go inspired build system for java ... written in go!</li>
-                    <li><a href="https://github.com/MrNavaStar/babe" target="_blank" style="color: #008689">Babe</a> : A java classfile parser written in go</li>
-                    <li><a href="https://github.com/MrNavaStar/ModMan" target="_blank" style="color: #008689">ModMan</a> : A CLI mod manager for minecraft</li>
-                </ul>
-            </details>
-        </li>
-        <li>
-            <details open>
-                <summary>C</summary>
-                <ul>
-                    <li><a href="https://github.com/MrNavaStar/GDMP" target="_blank" style="color: #008689">GDMP</a> : A unix signal/io filtering application</li>
-                </ul>
-            </details>
-        </li>
-        <li>
-            <details open>
-                <summary>Github Contributions</summary>
-                <ul>
-                    <li><a href="https://questcraft.org/" target="_blank" style="color: #008689">QuestCraft</a> : A standalone port of Minecraft: Java Edition to Oculus Quest Headsets</li>
-                    <li><a href="https://github.com/aarzilli/golua" target="_blank" style="color: #008689">GoLua</a> : Go bindings for the Lua C API</li>
-                    <li><a href="https://github.com/FabricMC/fabric" target="_blank" style="color: #008689">FabricMC</a> : Essential hooks for modding with Fabric. </li>
-                </ul>
-            </details>
-        </li>
-    </ul>
-</old-win>
-
-<old-win id="about" title="about-me.txt">
-    <ul class="tree-view">
-        <li>Hello! My name is Ethan.</li>
-        <li> - </li>
-        <li>I am a backend developer from 🇨🇦 Canada with a passion for programming</li>
-        <li>and greatly enjoy solving unique problems. I love working in Java & Golang,</li>
-        <li>though I am still in search of the perfect language.</li>
-        <li> - </li>
-        <li>I have lots of experience working with databases, web/microservice technologies,</li>
-        <li>low level systems, and game dev as well.</li>
-    </ul>
-</old-win>
+    <old-win class="win" id="time" title="time.ntp" style="width: 200px">
+        <div class="status-bar">
+            <p class="status-bar-field">My Current Time</p>
+            <p id="clock" class="status-bar-field">00:00:00</p>
+        </div>
+    </old-win>
+    <old-win class="win" id="github" title="github.md">
+        <fieldset>
+            <img src="https://ghchart.rshah.org/008689/mrnavastar.svg" alt="mrnavastar's Github chart" />
+        </fieldset>
+    </old-win>
+    <old-win class="win" id="projects"  title="projects.conf">
+        <ul class="tree-view">
+            <li>Notable Projects & Contributions</li>
+            <li>------------------------</li>
+            <li>
+                <details open>
+                    <summary>Java</summary>
+                    <ul>
+                        <li><a href="https://github.com/MrNavaStar/SQLib" target="_blank" style="color: #008689">SQLib</a> : A custom SQL orm with a focus on game dev</li>
+                        <li><a href="https://github.com/MrNavaStar/R" target="_blank" style="color: #008689">R</a> : The Jolliest Java Reflection Library on the 7 Seas </li>
+                        <li><a href="https://github.com/MrNavaStar/ProtoWeaver" target="_blank" style="color: #008689">ProtoWeaver</a> : A networking library for integrating custom protocols with minecraft</li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details open>
+                    <summary>Python</summary>
+                    <ul>
+                        <li><a href="https://github.com/MrNavaStar/WorldArchiver" target="_blank" style="color: #008689">WorldArchiver</a> : A simple web repository to archive your favourite minecraft worlds!</li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details open>
+                    <summary>Go</summary>
+                    <ul>
+                        <li><a href="https://github.com/MrNavaStar/Lyra" target="_blank" style="color: #008689">Lyra</a> : A go inspired build system for java ... written in go!</li>
+                        <li><a href="https://github.com/MrNavaStar/babe" target="_blank" style="color: #008689">Babe</a> : A java classfile parser written in go</li>
+                        <li><a href="https://github.com/MrNavaStar/ModMan" target="_blank" style="color: #008689">ModMan</a> : A CLI mod manager for minecraft</li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details open>
+                    <summary>C</summary>
+                    <ul>
+                        <li><a href="https://github.com/MrNavaStar/GDMP" target="_blank" style="color: #008689">GDMP</a> : A unix signal/io filtering application</li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details open>
+                    <summary>Github Contributions</summary>
+                    <ul>
+                        <li><a href="https://questcraft.org/" target="_blank" style="color: #008689">QuestCraft</a> : A standalone port of Minecraft: Java Edition to Oculus Quest Headsets</li>
+                        <li><a href="https://github.com/aarzilli/golua" target="_blank" style="color: #008689">GoLua</a> : Go bindings for the Lua C API</li>
+                        <li><a href="https://github.com/FabricMC/fabric" target="_blank" style="color: #008689">FabricMC</a> : Essential hooks for modding with Fabric. </li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
+    </old-win>
+    <old-win class="win" id="about" title="readme.txt">
+        <ul class="tree-view">
+            <li>Hello! My name is Ethan.</li>
+            <li> - </li>
+            <li>I am a backend developer from 🇨🇦 Canada with a passion for programming</li>
+            <li>and greatly enjoy solving unique problems. I love working in Java & Golang,</li>
+            <li>though I am still in search of the perfect language.</li>
+            <li> - </li>
+            <li>I have lots of experience working with databases, web/microservice technologies,</li>
+            <li>low level systems, and game dev as well.</li>
+        </ul>
+    </old-win>
+    <old-win class="win" id="pic" title="ethan-stevenson.jpg">
+        <img src="assets/ethan_old_quality.jpg" alt="?" style="width: 300px">
+    </old-win>
 </body>
 </html>
